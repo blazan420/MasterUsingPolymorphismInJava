@@ -56,4 +56,19 @@ public class Animal {
     public void setAnimalSpeed(int animalSpeed) {
         this.animalSpeed = animalSpeed;
     }
+
+    public int calculateTheOveralPowerOfAnimal() {
+
+        return getAnimalPower() * getAnimalSpeed();
+    }
+
+
+    @Override
+    public String toString() {
+
+        return String.format("%s: %s%n%s: %d%n%s: %d",
+                "Animal Name", getAnimalName(), "Animal Color", getAnimalColor(),
+                "Animal Power", getAnimalPower(), "Animal Speed", getAnimalSpeed());
+
+    }
 }
