@@ -2,6 +2,7 @@ package com.example.kevin.masterusingpolymorphisminjava;
 
 public class Cat extends Animal{
 
+    //Constructor
     public Cat(String animalName, String animalColor, int power, int speed) {
 
         super(animalName, animalColor, power, speed);
@@ -9,8 +10,8 @@ public class Cat extends Animal{
     }
 
     @Override
-    public int calculateTheOveralPowerOfAnimal() {
-        return super.calculateTheOveralPowerOfAnimal();
+    public int calculateTheOverallPowerOfAnimal() {
+        return super.calculateTheOverallPowerOfAnimal();
     }
 
     @Override

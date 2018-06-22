@@ -2,12 +2,15 @@ package com.example.kevin.masterusingpolymorphisminjava;
 
 public class Animal {
 
+    // Instance variables
     private String animalName;
     private String animalColor;
     private int animalPower;
     private int animalSpeed;
 
 
+
+    // Constructor, name "Animal" must be the same as the class name Animal.java
     public Animal(String animalName, String animalColor, int power, int speed) {
 
         if (power <= 0) {
@@ -23,7 +26,6 @@ public class Animal {
         this.animalPower = power;
         this.animalSpeed = speed;
     }
-
 
     public String getAnimalName() {
         return animalName;
@@ -57,7 +59,7 @@ public class Animal {
         this.animalSpeed = animalSpeed;
     }
 
-    public int calculateTheOveralPowerOfAnimal() {
+    public int calculateTheOverallPowerOfAnimal() {
 
         return getAnimalPower() * getAnimalSpeed();
     }
@@ -66,7 +68,7 @@ public class Animal {
     @Override
     public String toString() {
 
-        return String.format("%s: %s%n%s: %d%n%s: %d",
+        return String.format("%s: %s%n%s: %s%n%s: %d%n%s: %d",
                 "Animal Name", getAnimalName(), "Animal Color", getAnimalColor(),
                 "Animal Power", getAnimalPower(), "Animal Speed", getAnimalSpeed());
 

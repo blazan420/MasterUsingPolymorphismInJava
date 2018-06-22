@@ -6,13 +6,15 @@ public class Lion extends Animal {
     private boolean canFight = true;
     private int fightingPower;
 
+
+    // Constructor
     public Lion(String animalName, String animalColor, int power, int speed, boolean canFight,
                 int fightingPower) {
 
         super(animalName, animalColor, power, speed);
 
         if (fightingPower <= 0) {
-            throw new IllegalArgumentException("The Value of the Fighting Power must be greagter than" + " 0");
+            throw new IllegalArgumentException("The Value of the Fighting Power must be greater than" + " 0");
         }
 
         this.canFight = canFight;
@@ -39,13 +41,13 @@ public class Lion extends Animal {
 
 
     @Override
-    public int calculateTheOveralPowerOfAnimal() {
-        return super.calculateTheOveralPowerOfAnimal() + fightingPower;
+    public int calculateTheOverallPowerOfAnimal() {
+        return super.calculateTheOverallPowerOfAnimal() + fightingPower;
     }
 
     @Override
     public String toString() {
-        return  String.format("%s%n%s: %b%n%s: $d", super.toString(),
+        return  String.format("%s%n%s: %b%n%s: %d", super.toString(),
                 "Can our Lion fight?", getCanFight(), "The Fighting Power of our Lion is", getFightingPower());
     }
 }
